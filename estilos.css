@@ -1,0 +1,147 @@
+:root{
+  --max: 980px;
+  --pad: 18px;
+  --border: #e6e6e6;
+  --text: #111;
+  --muted: #555;
+  --bg: #fff;
+  --soft: #f7f7f7;
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+
+a{ color: inherit; }
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+header{
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+.nav{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.brand{
+  font-weight: 700;
+  text-decoration:none;
+}
+
+.menu{
+  display:flex;
+  gap:14px;
+  flex-wrap: wrap;
+  align-items:center;
+}
+
+.menu a{
+  text-decoration:none;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+.menu a:hover{ background: var(--soft); }
+
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+}
+.btn:hover{ background: var(--soft); }
+
+.btn-primary{
+  border-color: #111;
+  background: #111;
+  color: #fff;
+}
+.btn-primary:hover{ background:#000; }
+
+.hero{
+  padding: 34px 0 10px;
+}
+
+.hero h1{
+  margin: 0 0 8px;
+  font-size: clamp(28px, 4vw, 40px);
+  letter-spacing: -0.02em;
+}
+
+.hero p{
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 18px 0 28px;
+}
+
+.card{
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  background: var(--bg);
+}
+
+.card h2, .card h3{ margin: 0 0 8px; }
+.card p{ margin: 0 0 10px; color: var(--muted); }
+
+.kicker{
+  font-size: .92rem;
+  color: var(--muted);
+}
+
+.footer{
+  margin-top: 34px;
+  padding: 26px 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.small{
+  font-size: .95rem;
+  color: var(--muted);
+}
+
+.list{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+hr.sep{
+  border:0;
+  border-top:1px solid var(--border);
+  margin: 18px 0;
+}
+
+@media (min-width: 860px){
+  .grid{
+    grid-template-columns: 1.2fr .8fr;
+    align-items:start;
+  }
+}
